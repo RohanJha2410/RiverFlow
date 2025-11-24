@@ -1,0 +1,268 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* RTE Dark Theme Styles - AGGRESSIVE FIX */
+.rte-container {
+  border: 1px solid rgb(71 85 105);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Force all RTE text to be visible - OVERRIDE EVERYTHING */
+.w-md-editor,
+.w-md-editor *,
+.w-md-editor textarea,
+.w-md-editor input,
+.w-md-editor div {
+  color: white !important;
+  background-color: transparent !important;
+}
+
+/* Specific textarea targeting */
+textarea.w-md-editor-text-textarea,
+textarea.w-md-editor-text,
+.w-md-editor textarea,
+.w-md-editor-text textarea,
+.w-md-editor-text-area textarea {
+  background-color: rgb(30 41 59) !important;
+  color: #ffffff !important;
+  border: none !important;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  padding: 16px !important;
+  caret-color: white !important;
+  -webkit-text-fill-color: white !important;
+}
+
+/* Main editor container */
+[data-color-mode="dark"] .w-md-editor {
+  background-color: rgb(30 41 59) !important;
+  border: 1px solid rgb(71 85 105) !important;
+  color: white !important;
+}
+
+/* Toolbar */
+[data-color-mode="dark"] .w-md-editor-bar {
+  background-color: rgb(51 65 85) !important;
+  border-bottom: 1px solid rgb(71 85 105) !important;
+}
+
+[data-color-mode="dark"] .w-md-editor-bar svg,
+[data-color-mode="dark"] .w-md-editor-bar button {
+  color: rgb(226 232 240) !important;
+}
+
+[data-color-mode="dark"] .w-md-editor-bar button:hover {
+  background-color: rgb(71 85 105) !important;
+}
+
+/* Text area - the actual input field */
+[data-color-mode="dark"] .w-md-editor-text,
+[data-color-mode="dark"] .w-md-editor-text-textarea,
+[data-color-mode="dark"] .w-md-editor-text-container,
+[data-color-mode="dark"] .w-md-editor-text-area {
+  background-color: rgb(30 41 59) !important;
+  color: white !important;
+  border: none !important;
+}
+
+/* The actual textarea element where you type */
+[data-color-mode="dark"] .w-md-editor-text textarea,
+[data-color-mode="dark"] .w-md-editor-text-textarea textarea {
+  background-color: rgb(30 41 59) !important;
+  color: white !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  padding: 12px !important;
+  border: none !important;
+  outline: none !important;
+  resize: vertical !important;
+}
+
+[data-color-mode="dark"] .w-md-editor-text textarea::placeholder {
+  color: rgb(148 163 184) !important;
+  opacity: 1 !important;
+}
+
+/* Preview panel */
+[data-color-mode="dark"] .w-md-editor-preview {
+  background-color: rgb(30 41 59) !important;
+  color: white !important;
+  padding: 12px !important;
+}
+
+[data-color-mode="dark"] .w-md-editor-preview * {
+  color: white !important;
+}
+
+/* Preview content styling */
+[data-color-mode="dark"] .w-md-editor-preview h1,
+[data-color-mode="dark"] .w-md-editor-preview h2,
+[data-color-mode="dark"] .w-md-editor-preview h3,
+[data-color-mode="dark"] .w-md-editor-preview h4,
+[data-color-mode="dark"] .w-md-editor-preview h5,
+[data-color-mode="dark"] .w-md-editor-preview h6 {
+  color: rgb(226 232 240) !important;
+}
+
+[data-color-mode="dark"] .w-md-editor-preview p,
+[data-color-mode="dark"] .w-md-editor-preview li,
+[data-color-mode="dark"] .w-md-editor-preview span {
+  color: rgb(203 213 225) !important;
+}
+
+[data-color-mode="dark"] .w-md-editor-preview code {
+  background-color: rgb(51 65 85) !important;
+  color: rgb(251 191 36) !important;
+  padding: 2px 4px !important;
+  border-radius: 3px !important;
+}
+
+[data-color-mode="dark"] .w-md-editor-preview pre {
+  background-color: rgb(15 23 42) !important;
+  color: rgb(226 232 240) !important;
+  padding: 12px !important;
+  border-radius: 6px !important;
+}
+
+/* Focus states */
+[data-color-mode="dark"] .w-md-editor-focus,
+[data-color-mode="dark"] .w-md-editor-text:focus-within {
+  border-color: rgb(99 102 241) !important;
+  box-shadow: 0 0 0 1px rgb(99 102 241) !important;
+}
+
+/* Ensure minimum height */
+.w-md-editor {
+  min-height: 300px !important;
+}
+
+.w-md-editor-text {
+  min-height: 250px !important;
+}
+
+/* Force textarea visibility with highest specificity */
+[data-color-mode="dark"] .w-md-editor-text > div > textarea,
+[data-color-mode="dark"] .w-md-editor-text textarea {
+  background-color: rgb(30 41 59) !important;
+  color: #ffffff !important;
+  caret-color: white !important;
+}
+
+/* Additional fallback selectors */
+.rte-container [data-color-mode="dark"] textarea,
+.rte-container textarea {
+  background-color: rgb(30 41 59) !important;
+  color: #ffffff !important;
+  caret-color: white !important;
+}
+
+/* Global textarea override within RTE containers */
+div[data-color-mode="dark"] textarea {
+  background-color: rgb(30 41 59) !important;
+  color: #ffffff !important;
+  caret-color: white !important;
+}
+
+/* Global Input Field Fixes - Ensure all inputs are visible */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="file"],
+textarea,
+select {
+  color: white !important;
+  background-color: rgb(30 41 59) !important;
+  border: 1px solid rgb(71 85 105) !important;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+input[type="search"]::placeholder,
+input[type="url"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="number"]::placeholder,
+textarea::placeholder {
+  color: rgb(148 163 184) !important;
+  opacity: 1 !important;
+}
+
+/* Specific fixes for dark themed containers */
+.bg-slate-950 input,
+.bg-slate-800 input,
+.bg-gray-900 input {
+  color: white !important;
+  background-color: rgb(30 41 59) !important;
+  border-color: rgb(71 85 105) !important;
+}
+
+.bg-slate-950 input::placeholder,
+.bg-slate-800 input::placeholder,
+.bg-gray-900 input::placeholder {
+  color: rgb(148 163 184) !important;
+  opacity: 1 !important;
+}
+
+/* Focus states for inputs */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+  border-color: rgb(99 102 241) !important;
+  box-shadow: 0 0 0 1px rgb(99 102 241) !important;
+}
+
+/* File input specific styling */
+input[type="file"] {
+  color: white !important;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  background-color: rgb(51 65 85) !important;
+  color: white !important;
+  border: 1px solid rgb(71 85 105) !important;
+  border-radius: 4px !important;
+  padding: 4px 8px !important;
+  cursor: pointer !important;
+}
+
+/* Search input specific */
+input[type="search"] {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+
+/* ULTIMATE RTE TEXT VISIBILITY FIX - MAXIMUM PRIORITY */
+.w-md-editor textarea {
+  color: white !important;
+  background-color: rgb(30 41 59) !important;
+  -webkit-text-fill-color: white !important;
+  opacity: 1 !important;
+}
+
+/* Force text visibility in all possible selectors */
+div[data-color-mode="dark"] .w-md-editor textarea,
+div[data-color-mode="dark"] textarea,
+[data-color-mode="dark"] textarea,
+textarea {
+  color: white !important;
+  background-color: rgb(30 41 59) !important;
+  -webkit-text-fill-color: white !important;
+  caret-color: white !important;
+}
+
+/* Placeholder text */
+textarea::placeholder,
+.w-md-editor textarea::placeholder {
+  color: rgb(148 163 184) !important;
+  opacity: 0.7 !important;
+  -webkit-text-fill-color: rgb(148 163 184) !important;
+}
+
